@@ -1,201 +1,221 @@
-
-/* Estilo general */
+/* Estilo general para todos los elementos */
 * {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif; /* Define la fuente para todo el documento */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina relleno predeterminado */
+    box-sizing: border-box; /* Incluye bordes y rellenos en los cálculos de ancho/alto */
 }
 
+/* Estilos para el cuerpo del documento */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 0;
-    background-color: black;
+    display: flex; /* Configura un contenedor flexible */
+    flex-direction: column; /* Los elementos hijos se organizan en columna */
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+    justify-content: space-between; /* Espacia los elementos en todo el alto disponible */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 0; /* Sin relleno */
+    background-color: black; /* Fondo negro */
 }
+
+/* Contenedor principal de la aplicación */
 .app-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    background-color: #3a3a3a;
-    color: black;
-    padding: 20px; /* Márgenes alrededor */
-    box-sizing: border-box;
+    display: flex; /* Contenedor flexible */
+    flex-direction: column; /* Los elementos hijos se organizan en columna */
+    justify-content: space-between; /* Espacia los elementos de manera uniforme */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #3a3a3a; /* Fondo gris oscuro */
+    color: black; /* Color de texto */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye padding y border en los cálculos de tamaño */
 }
 
-/* Encabezado */
+/* Estilo para el encabezado */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #1c1c1c;
-    border-radius: 10px;
+    display: flex; /* Contenedor flexible */
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Espacia uniformemente los elementos */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #1c1c1c; /* Fondo negro */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Iconos dentro del encabezado */
 .icon {
-    width: 30px;
-    height: 30px;
-    background-color:#1c1c1c;
-    cursor: pointer;
+    width: 30px; /* Ancho fijo */
+    height: 30px; /* Alto fijo */
+    background-color: #1c1c1c; /* Fondo negro */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
+
+/* Icono del usuario */
 .icon-user {
-    width: 30px;
-    height: 30px;
-    background-color:#1c1c1c;
+    width: 30px; /* Ancho fijo */
+    height: 30px; /* Alto fijo */
+    background-color: #1c1c1c; /* Fondo negro */
 }
 
+/* Estilo para el nombre de usuario */
 .username {
-    flex: 1;
-    margin-left: 10px;
-    color: white;
-    font-size: 1.2rem;
+    flex: 1; /* Ocupa espacio flexible */
+    margin-left: 10px; /* Espaciado a la izquierda */
+    color: white; /* Color del texto */
+    font-size: 1.2rem; /* Tamaño de fuente */
 }
 
+/* Barra de búsqueda */
 .search-bar {
-    flex: 2;
-    background-color: #3a3a3a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-right: 15px;
+    flex: 2; /* Ocupa más espacio que el nombre de usuario */
+    background-color: #3a3a3a; /* Fondo gris oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    margin-right: 15px; /* Margen a la derecha */
 }
 
-/* Contenedor central */
+/* Contenedor central para los GIFs */
 .gif-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    margin: 20px 0; /* Espaciado entre secciones */
-    background-color: #3a3a3a;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* Contenedor flexible */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    background-color: #3a3a3a; /* Fondo gris oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+/* Estilo para la imagen del GIF */
 .gif {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-    object-fit: contain;
+    max-width: 100%; /* Ancho máximo */
+    max-height: 100%; /* Altura máxima */
+    border-radius: 10px; /* Bordes redondeados */
+    object-fit: contain; /* Escala la imagen manteniendo su relación de aspecto */
 }
-/* Botón de Comentarios */
+
+/* Botón de comentarios */
 .comment-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: none; /* Sin fondo */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    display: flex; /* Contenedor flexible */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Centra horizontalmente */
 }
 
+/* Icono de comentarios */
 .comment-icon {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    width: 40px; /* Ancho fijo */
+    height: 40px; /* Alto fijo */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: transform 0.2s ease-in-out; /* Animación suave al pasar por encima */
 }
 
+/* Efecto hover en el icono de comentarios */
 .comment-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
 
-/* Sección de Comentarios */
+/* Sección emergente de comentarios */
 .comment-section {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 400px;
-    background-color: #1c1c1c;
-    border: 2px solid #888;
-    border-radius: 10px;
-    padding: 15px;
-    color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-    z-index: 10;
+    position: absolute; /* Posición relativa al contenedor */
+    bottom: 100px; /* A 100px del borde inferior */
+    left: 50%; /* Centrada horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado */
+    width: 90%; /* Ancho relativo a la pantalla */
+    max-width: 400px; /* Ancho máximo */
+    background-color: #1c1c1c; /* Fondo negro */
+    border: 2px solid #888; /* Borde gris */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    color: white; /* Texto blanco */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Sombra pronunciada */
+    z-index: 10; /* Se asegura de que esté por encima de otros elementos */
 }
 
+/* Encabezado de la sección de comentarios */
 .comment-section h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+    text-align: center; /* Centra el texto */
+    margin-bottom: 10px; /* Margen inferior */
+    font-size: 1.2rem; /* Tamaño de fuente */
 }
 
+/* Lista de comentarios */
 .comment-list {
-    max-height: 150px;
-    overflow-y: auto;
-    margin-bottom: 10px;
+    max-height: 150px; /* Altura máxima */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    margin-bottom: 10px; /* Margen inferior */
 }
 
+/* Estilo para un comentario */
 .comment {
-    background-color: #333;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-bottom: 5px;
+    background-color: #333; /* Fondo gris oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    margin-bottom: 5px; /* Espaciado inferior */
 }
 
+/* Mensaje cuando no hay comentarios */
 .no-comments {
-    text-align: center;
-    color: #888;
+    text-align: center; /* Centra el texto */
+    color: #888; /* Texto gris claro */
 }
 
+/* Contenedor del input para comentarios */
 .comment-input-container {
-    display: flex;
-    align-items: center;
+    display: flex; /* Contenedor flexible */
+    align-items: center; /* Alinea verticalmente */
 }
 
+/* Campo de entrada para escribir comentarios */
 .comment-input {
-    flex-grow: 1;
-    padding: 5px 10px;
-    border: 1px solid #888;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
-    font-size: 0.9rem;
-    outline: none;
-    margin-right: 5px;
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    padding: 5px 10px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #333; /* Fondo gris oscuro */
+    color: white; /* Texto blanco */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    outline: none; /* Sin borde al seleccionar */
+    margin-right: 5px; /* Margen derecho */
 }
 
+/* Botón para agregar comentarios */
 .add-comment-button {
-    background-color: #888;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: white;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    background-color: #888; /* Fondo gris claro */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Texto blanco */
+    font-size: 0.9rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease-in-out; /* Transición suave al cambiar el fondo */
 }
 
+/* Efecto hover en el botón de agregar comentarios */
 .add-comment-button:hover {
-    background-color: #555;
+    background-color: #555; /* Fondo más oscuro */
 }
 
-
-/* Botones del footer */
+/* Barra inferior con botones */
 .footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background-color: #1c1c1c;
+    display: flex; /* Contenedor flexible */
+    justify-content: space-around; /* Espacia los elementos uniformemente */
+    align-items: center; /* Alinea verticalmente */
+    padding: 10px; /* Espaciado interno */
+    background-color: #1c1c1c; /* Fondo negro */
 }
 
+/* Iconos en el footer */
 .no-next-icon, .like-icon, .comment-icon, .next-icon {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    width: 40px; /* Ancho fijo */
+    height: 40px; /* Alto fijo */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: transform 0.2s ease-in-out; /* Transición suave al escalar */
 }
 
+/* Efecto hover en los iconos del footer */
 .no-next-icon:hover, .like-icon:hover, .comment-icon:hover, .next-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
